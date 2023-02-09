@@ -1,0 +1,15 @@
+﻿int a = new Random().Next(1, 10);
+Console.WriteLine(a);
+int b = new Random().Next(1, 10);
+Console.WriteLine(b);
+int c = new Random().Next(1, 10);
+Console.WriteLine(c);
+int d = new Random().Next(1, 10);
+Console.WriteLine(d);
+int min = a;
+if (a < min) min = a;
+if (b < min) min = b;
+if (c < min) min = c;
+if (d < min) min = d;
+Console.Write("min = ");
+Console.WriteLine(min);
