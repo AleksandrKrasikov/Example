@@ -11,7 +11,7 @@ int.TryParse(Console.ReadLine()!, out number);
 Console.Write("Введите 2 число: ");
 int.TryParse(Console.ReadLine()!, out number2);
 
-if (number == number2 * number2)
+if (number == number2 * number2)    //"==" - сравнение "!=" - не равно
 {
     Console.Write("Да");
 }
