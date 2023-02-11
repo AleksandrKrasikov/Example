@@ -15,7 +15,7 @@ if (number == number2 * number2)
 {
     Console.Write("Да");
 }
-if (number != number2 * number2)
+else                   //if (number != number2 * number2)
 {
     Console.Write("Нет");
 }
