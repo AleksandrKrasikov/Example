@@ -3,4 +3,8 @@
 5 -> 2, 4
 8 -> 2, 4, 6, 8  */
 
-Console.WriteLine("Hello, World!");
+int N;
+Console.Write("Введите число: ");
+int.TryParse(Console.ReadLine()!, out N);
+for (int i = 2; i <= N; i += 2)
+    Console.Write($"{i} ");

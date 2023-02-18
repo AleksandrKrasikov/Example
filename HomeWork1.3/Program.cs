@@ -4,4 +4,10 @@
 -3 -> нет
 7 -> нет  */
 
-Console.WriteLine("Hello, World!");
+int num1;
+Console.Write("Введите число: ");
+int.TryParse(Console.ReadLine()!, out num1);
+if (num1 % 2 == 0)
+    Console.Write("Да");
+else
+    Console.Write("Нет");
