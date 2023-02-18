@@ -10,10 +10,8 @@ if (num >= 1 && num <= 5)
 { 
     Console.Write("Рабочий"); 
 } 
-
 else if (num >= 6 && num <= 7) 
 { 
     Console.Write("Выходной"); 
 } 
-else Console.Write("Нет такого дня недели"); 
-
+else Console.Write("Нет такого дня недели");
