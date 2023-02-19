@@ -1,18 +1,26 @@
-﻿int counter = 0;
-for (int i = 0; i < 10; i = i + 1)
+﻿/* Напишите программу, которая принимает на вход координаты точки (X м Y),
+пирчем X ≠ и Y ≠ 0 и выдает номер четверти плоскости, в которой находится эта точка. */
+
+int x, y;
+Console.Write($"Введите x: ");
+int.TryParse(Console.ReadLine()!, out x);
+
+Console.Write($"Введите y: ");
+int.TryParse(Console.ReadLine()!, out y);
+
+if (x > 0)
 {
-    if (i > 7)
-    {
-        counter = counter +2;
-        
-    }
-counter = counter + 1;
-Console.WriteLine($"counter2 = {counter}");
+    if (y > 0)
+        Console.Write($"Плоскость 1");
+    else
+        Console.Write($"Плоскость 4");
 }
-Console.WriteLine($"counter3 = {counter}");
-
-
-
-
+else
+{
+    if (y > 0)
+        Console.Write($"Плоскость 2");  
+    else
+        Console.Write($"Плоскость 3");
+}
 
 
