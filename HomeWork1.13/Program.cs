@@ -6,8 +6,8 @@
 
 int[] array = CreateArray();
 
-for (int i = 0; i < array.Length; i++)
-    Console.Write($"{array[i]} ");
+PrintArray(array);
+PrintArray2(array);
 
 int[] CreateArray()
 {
@@ -15,4 +15,23 @@ int[] CreateArray()
     for (int i = 0; i< array.Length; i++)
             array[i] = new Random().Next(0, 100);
     return array;
+}
+void PrintArray(int [] array)
+{
+    for (int i =0; i < array.Length - 1; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.Write($"{array[array.Length - 1]}");
+    Console.Write($" -> ");
+}
+void PrintArray2(int [] array)
+{
+    Console.Write("[");
+    for (int i =0; i < array.Length - 1; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.Write($"{array[array.Length - 1]}");
+    Console.Write("]");
 }
