@@ -5,8 +5,8 @@
 
 double[] array = new double [5];
 FillArray(array);
-double min = Int32.MaxValue;
-double max = Int32.MinValue;
+double min = array[0];
+double max = array[0];
 
 for (int i = 0; i < array.Length; i++)
 {
@@ -20,12 +20,12 @@ for (int i = 0; i < array.Length; i++)
         }
 }
 
-Console.Write($"[{String.Join("  ", array)}] - > {max - min}");
+Console.Write($"[{String.Join("  ", array)}] -> {max - min}");
 
 void FillArray(double[] array)
 {
     for(int i = 0; i < array.Length; i++)
         {
-            array[i] = Convert.ToDouble(new Random().Next(0, 100));
+            array[i] = Convert.ToDouble(new Random().Next(-100, 100));
         }
 }
