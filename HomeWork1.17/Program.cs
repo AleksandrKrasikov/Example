@@ -7,18 +7,19 @@
 
 
 Console.Write("Введите числа через запятую: ");
-int[] numbers = StringToNum(Console.ReadLine()!);
-PrintArray(numbers);
+int[] array = StringToNum(Console.ReadLine()!);
+
 int sum = 0;
-for (int i = 0; i < numbers.Length; i++)
+for (int i = 0; i < array.Length; i++)
 {
-    if (numbers[i] > 0)
+    if (array[i] > 0)
     {
         sum++;
     }
 }
-Console.WriteLine();
-Console.WriteLine($"количество значений больше 0 = {sum}");
+
+
+Console.Write($"{String.Join(", ", array)} -> {sum}");
 
 
 int[] StringToNum(string input)
@@ -56,15 +57,4 @@ int[] StringToNum(string input)
         index++;
     }
     return numbers;
-}
-
-
-void PrintArray(int[] array)
-{
-    Console.Write("[ ");
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.Write("]");
 }

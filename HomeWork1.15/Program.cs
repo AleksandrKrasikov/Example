@@ -11,7 +11,7 @@ for (int i = 0; i < array.Length; i+=2)
     sum = sum + array[i];
 
 
-Console.Write($"[{String.Join(", ", array)}] - > {sum}");
+Console.Write($"[{String.Join(", ", array)}] -> {sum}");
 
 
 
