@@ -12,9 +12,9 @@ if (flag)
     if (N < 0)
         N *= -1;
 
-    for (int i2 = -N; i2 <= N; i2++)
+    for (int i = -N; i <= N; i++)
     {
-        Console.Write($"{i2} ");
+        Console.Write($"{i} ");
     }
 
     /*int i = -N
