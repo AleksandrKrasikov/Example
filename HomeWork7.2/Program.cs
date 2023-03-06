@@ -32,7 +32,7 @@ colum -= 1;
 
 if (line < 0 | line > array.GetLength(0) - 1 | colum < 0 | colum > array.GetLength(1) - 1)
 {
-    Console.WriteLine("Такого числа в массиве нет ");
+    Console.WriteLine($"{line + 1};{colum + 1} -> Такого числа в массиве нет ");
 }
 else
 {
