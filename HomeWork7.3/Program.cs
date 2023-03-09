@@ -26,10 +26,8 @@ for (int j = 0; j < array.GetLength(1); j++)
     {
         sum += array[i, j];
     }
-    Console.Write($"{sum / array.GetLength(0)}");
+    Console.Write($"Среднее арифметическое столбца {j + 1}: {sum / array.GetLength(0)};\n");
 }
-Console.ReadLine();
-
 
 
 

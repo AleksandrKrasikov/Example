@@ -8,6 +8,30 @@
 5 9 2 3 
 1 4 7 2 */
 
+/* List<List<int>> array = new List<List<int>>();
+
+for (int i = 0; i < array.Count; i++) // строки
+{
+    array.Add(new List<int>());
+    for (int j = 0; j < array[i].Count; j++) // столбцы
+    {
+        array[i].Add(new Random().Next(10));
+        Console.WriteLine($"{array[i][j]} ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine();
+
+int lastRow = array.Count - 1;
+
+//for (int i = 0; i < array[0].Count; i++)
+//    (array[0][i], array[lastRow][i]) = (array[lastRow][i], array[0][i]);
+
+
+(array[0], array[lastRow]) = (array[lastRow], array[0]); */
+
+
 int [,] array = new int[3, 4];
 
 for (int i = 0; i < array.GetLength(0); i++) // строки
@@ -32,8 +56,6 @@ for (int i = 0; i < array.GetLength(1); i++)
 }
 
 PrintArray(array);
-
-
 
 void PrintArray(Array arr)
 {
