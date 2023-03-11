@@ -1,5 +1,5 @@
 ﻿/*  Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы.
-В случае, если это невозможноб программа должна вывести сообщение для пользователя.
+В случае, если это невозможно, программа должна вывести сообщение для пользователя.
 Например, задан массив:
 1 4 7 2
 5 9 2 3
@@ -21,11 +21,22 @@ for (int i = 0; i < array.GetLength(0); i++)
 }
 PrintArray(array);
 
+if (array.GetLength(0) != array.GetLength(1))
+{
+    Console.Write($"Помменять строки и столбцы невозможно.");
+    return;
+}
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = i + 1; j < array.GetLength(1); j++)
+    {
+        (array[i, j], array[j, i]) = (array[j, i], array[i, j]);
+    }
+}
 
+Console.WriteLine();
 
-
-
-
+PrintArray(array);
 
 void PrintArray(Array arr)
 {
