@@ -6,7 +6,7 @@
 18 20
 15 18 */
 
-int[,] firstMartrix = new int[2, 2];
+/* int[,] firstMartrix = new int[2, 2];
 FillArray(firstMartrix);
 Console.WriteLine($"Первая матрица:");
 PrintArray(firstMartrix);
@@ -47,7 +47,7 @@ void FillArray(int[,] arr)
             arr[i, j] = new Random().Next(10);
         }
     }
-}
+} */
 
 
 
@@ -84,3 +84,45 @@ void PrintArray(Array arr)
     }
 }
 
+int[,] a = new int[3, 4];
+int[,] b = new int[4, 5];
+
+for (int i = 0; i < a.GetLength(0); i++)
+{
+    for (int j = 0; j < a.GetLength(1); j++)
+    {
+        a[i, j] = new Random().Next(10);
+    }
+}
+for (int i = 0; i < b.GetLength(0); i++)
+{
+    for (int j = 0; j < b.GetLength(1); j++)
+    {
+        b[i, j] = new Random().Next(10);
+    }
+}
+
+
+if (a.GetLength(1) != b.GetLength(0))
+{
+    Console.Write($"Матрицы нельзя умножить.");
+    return;
+}
+int[,] c = new int[a.GetLength(0), b.GetLength(1)];
+
+for (int i = 0; i < c.GetLength(0); i++)
+{
+    for (int j = 0; j < c.GetLength(1); j++)
+    {
+        for (int k = 0; k < a.GetLength(1); k++)
+        {
+            c[i, j] += a[i, k] * b[k, j];
+        }
+    }
+}
+
+PrintArray(a);
+Console.WriteLine();
+PrintArray(b);
+Console.WriteLine();
+PrintArray(c);
